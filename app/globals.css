@@ -1,21 +1,22 @@
+/* app/globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%; /* Light mode background */
-    --foreground: 222.2 84% 4.9%; /* Light mode text */
-    /* ... other light mode colors ... */
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%; /* Dark mode background */
-    --foreground: 210 20% 98%; /* Dark mode text */
-    /* ... other dark mode colors ... */
-  }
+body {
+  font-family: var(--font-poppins);
 }
 
-body {
-  @apply bg-background text-foreground; /* Apply these classes */
+/* Optional: If you still see a shadow on the notepad container, add this */
+.bg-card {
+  box-shadow: none !important; /* Force no shadow for elements with bg-card */
+}
+
+/* Optional: If the textarea itself has a shadow in light mode */
+.dark .bg-secondary {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Re-apply shadow only in dark mode if desired */
+}
+.bg-secondary {
+  box-shadow: none !important; /* Ensure no shadow in light mode */
 }
