@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Inkwell - Your Simple Notepad',
+  title: 'shadowpad - your simple notepad',
   description: 'A simple dark-mode notepad application with minimal design.',
 };
 
