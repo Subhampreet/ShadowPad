@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* Light mode background */
+    --foreground: 222.2 84% 4.9%; /* Light mode text */
+    /* ... other light mode colors ... */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%; /* Dark mode background */
+    --foreground: 210 20% 98%; /* Dark mode text */
+    /* ... other dark mode colors ... */
+  }
+}
+
+body {
+  @apply bg-background text-foreground; /* Apply these classes */
+}
